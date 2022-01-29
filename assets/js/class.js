@@ -3,16 +3,34 @@ class Product{
     //FUNÇÃO CONSTRUTORA
     constructor(){
         this.id = 0;
-        this.name = '';
-        this.price = 0
-        this.description = ''
-        this.image = ''
+        this.name = name;
+        this.description = description;
+        this.price = price; 
     }
 
-    //FUNÇÃO QUE ADICIONA UM PRODUTO NA LISTA
-    addProduct(){
-        alert('Chamei a função Adiciona')
+    //FUNÇÕES GETTERS
+    get cleanData(){
+       return this.readData()
     }
+
+     //FUNÇÃO RESPONSÁVEL POR LER OS DADOS INSERIDOS NO FORM
+    get readData(){
+        let product = {}
+
+        product.id = this.id
+        product.nameProduct = productName
+        product.descriptionProduct = descriptionProduct
+        product.priceProduct = priceProduct
+
+        return product
+     }
+
+    //---------- FUNÇÕES SETTERS -----------
+
+     //FUNÇÃO QUE SALVA UM PRODUTO NA LISTA
+    saveProduct(){
+        let produto = this.readData
+     }
 
     //FUNÇÃO QUE EDITA UM PRODUTO DA LISTA
     editProduct(){
@@ -24,10 +42,17 @@ class Product{
         alert('Chamei a função Deleta')
     }
 
-    //FUNÇÃO QUE SALVA UM PRODUTO NA LISTA
-    saveProduct(){
-        alert('Chamei a função Salva')
+    //FUNÇÃO QUE LIMPA OS CAMPOS DO FORM
+    cancelAddProduct(){
+        console.log(product.cleanData)
     }
+    
+    //FUNÇÃO RESPONSÁVEL POR FAZER O UPLOAD DA IMAGEM DO PRODUTO
+    uploadImageProduct(){
+
+    }
+
 }
 
-const product = new Product() 
+const product = new Product(0, 'Camiseta', 'Camiseta 100% algodão', 19.99) 
+
