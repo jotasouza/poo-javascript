@@ -19,13 +19,13 @@
 <body class="hero">
     <!-- CABEÇALHO -->
     <header>
-        <h1 class="title">Minha Loja</h1>
+        <h1 class="has-text-centered">Minha Loja</h1>
     </header>
     <!-- CONTEÚDO PRINCIPAL -->
     <main class="hero-body">
         <div class="title has-text-centered">
             <h2>Produtos</h2>
-            <span class="subtitle">Lista de produtos da minha loja.</span>
+            <span class="subtitle is-size-5">Lista de produtos da loja</span>
         </div>
         <form class="box">
             <div class="field">
@@ -39,7 +39,7 @@
                 </div>
                 <div class="control is-medium">
                     <label>Valor: </label>
-                    <input class="input is-info" type="number" id="valor" placeholder="Preço do produto">
+                    <input class="input is-info" type="text" id="valor" placeholder="Preço do produto">
                 </div>
                 <div class="file is-link has-name mt-3">
                     <label class="file-label mt-2 mr-2"> Imagem do produto:</label>
@@ -56,16 +56,10 @@
             </div>
             <div class="field is-grouped">
                 <p class="control">
-                    <button class="button is-link is-outlined" id="buttonAdd">Adicionar</button>
-                </p>
-                <p class="control">
-                    <button class="button is-link is-outlined" id="buttonEdit">Editar</button>
+                    <button class="button is-success is-outlined" id="buttonAdd">Adicionar</button>
                 </p>
                 <p class="control">
                     <button class="button is-danger is-outlined" id="buttonDelete">Remover</button>
-                </p>
-                <p class="control">
-                    <button class="button is-success is-outlined" id="buttonSave">Salvar</button>
                 </p>
             </div> 
         </form>
@@ -98,7 +92,13 @@
         </div>
     </main>
     <!-- RODAPÉ -->
-    <footer></footer>
+    <footer class="footer" id="rodape">
+        <div class="content has-text-centered">
+            <p>
+              <strong>Vale Shop</strong> by <a href="https://github.com/jotasouza" target="_blank">Jonatas Souza</a> 2022.
+            </p>
+          </div>
+    </footer>
 
     <script src="./assets/js/class.js"></script>
     <script src="./assets/js/main.js"></script>
