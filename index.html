@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/bulma.css">
+    
+    <!-- TITULO -->
+    <title>Projeto POO com Javascript</title>
+
+</head>
+<body class="hero">
+    <!-- CABEÇALHO -->
+    <header>
+        <h1 class="title">Minha Loja</h1>
+    </header>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="hero-body">
+        <div class="title has-text-centered">
+            <h2>Produtos</h2>
+            <span class="subtitle">Lista de produtos da minha loja.</span>
+        </div>
+        <form class="box">
+            <div class="field">
+                <div class="control is-medium">
+                    <label>Produto: </label>
+                    <input class="input is-info" type="text" id="produto" placeholder="Nome do produto">
+                </div>
+                <div class="control is-medium">
+                    <label>Descrição: </label>
+                    <textarea class="textarea is-info has-fixed-size" rows="3" id="descricao" placeholder="Descrição do produto"></textarea>
+                </div>
+                <div class="control is-medium">
+                    <label>Valor: </label>
+                    <input class="input is-info" type="number" id="valor" placeholder="Preço do produto">
+                </div>
+                <div class="file is-link has-name mt-3">
+                    <label class="file-label mt-2 mr-2"> Imagem do produto:</label>
+                        <input class="file-input" type="file" name="imagem">
+                        <span class="file-cta">
+                            <span class="file-icon">
+                              <i class="fas fa-upload"></i>
+                            </span>
+                            <span class="file-label">
+                                Escolha um arquivo...
+                            </span>
+                          </span>                    
+                </div>
+            </div>
+            <div class="field is-grouped">
+                <p class="control">
+                    <button class="button is-link is-outlined" id="buttonAdd">Adicionar</button>
+                </p>
+                <p class="control">
+                    <button class="button is-link is-outlined" id="buttonEdit">Editar</button>
+                </p>
+                <p class="control">
+                    <button class="button is-danger is-outlined" id="buttonDelete">Remover</button>
+                </p>
+                <p class="control">
+                    <button class="button is-success is-outlined" id="buttonSave">Salvar</button>
+                </p>
+            </div> 
+        </form>
+        <div class="hero">
+            <div class="hero-body">
+                <table class="table is-bordered">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Produto</th>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                            <th>Imagem</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <th>1</th>
+                        <th>Camiseta Casual Branca</th>
+                        <th>Camiseta em malha 100% algodão com gola redonda.</th>
+                        <th>29.90</th>
+                        <th>camiseta-casual-branca.png</th>
+                        <th>
+                            <img src="./assets/img/icons/edit.png" alt="Editar">
+                            <img src="./assets/img/icons/delete.png" alt="Deletar">
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+    <!-- RODAPÉ -->
+    <footer></footer>
+
+    <script src="./assets/js/class.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
