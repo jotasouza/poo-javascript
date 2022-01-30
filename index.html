@@ -19,46 +19,15 @@
 <body class="hero">
     <!-- CABEÇALHO -->
     <header>
-        <h1 class="has-text-centered">Minha Loja</h1>
+        <h1 class="has-text-centered">Cadastro de Produtos</h1>
     </header>
     <!-- CONTEÚDO PRINCIPAL -->
     <main class="hero-body">
         <div class="title has-text-centered">
-            <h2>Produtos</h2>
             <span class="subtitle is-size-5">Lista de produtos da loja</span>
         </div>
-        <form class="box">
-            <div class="field">
-                <div class="control is-medium">
-                    <label>Produto: </label>
-                    <input class="input is-info" type="text" id="nomeProduto" placeholder="Nome do produto">
-                </div>
-                <div class="control is-medium">
-                    <label>Descrição: </label>
-                    <textarea class="textarea is-info has-fixed-size" rows="3" id="descricao" placeholder="Descrição do produto"></textarea>
-                </div>
-                <div class="control is-medium">
-                    <label>Valor: </label>
-                    <input class="input is-info" type="text" id="valor" placeholder="Preço do produto">
-                </div>
-                <div class="file is-link has-name mt-3">
-                    <label class="file-label mt-2 mr-2"> Imagem do produto:</label>
-                        <input class="file-input" type="file" name="imagem" id="uploadImage">
-                        <span class="file-cta">
-                            <span class="file-icon">
-                              <i class="fas fa-upload"></i>
-                            </span>
-                            <span class="file-label">
-                                Escolha um arquivo...
-                            </span>
-                          </span>                    
-                </div>
-            </div>
-            <div class="buttons">
-                    <button class="button is-success is-outlined" id="buttonSave">Salvar</button>
-                    <button class="button is-danger is-outlined" id="buttonCancel">Cancelar</button>
-            </div> 
-        </form>
+        <button class="button is-link js-modal-trigger" data-target="modal-produtos" id="cadastrarProduto">Cadastrar Produto</button>
+
         <div class="hero">
             <div class="hero-body">
                 <table class="table is-bordered">
@@ -89,6 +58,60 @@
                 </table>
             </div>
         </div>
+        <div class="modal" id="modal-produtos">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <p class="modal-card-title">Novo Produto</p>
+                <button class="delete" aria-label="close"></button>
+              </header>
+              <section class="modal-card-body">
+                <form class="modal-form">
+                    <label>Nome</label>
+                    <input class="input" type="text" placeholder="Nome do produto">
+                    <label>Descrição</label>
+                    <textarea class="textarea has-fixed-size" placeholder="Descrição do produto" rows="4"></textarea>
+                    <label>Preço</label>
+                    <input class="input" type="text" placeholder="Preço do produto">
+                    <div class="columns">
+                        <div class="column">
+                            <label>Categoria</label>
+                            <div class="select">
+                                <select>
+                                <option>Selecione</option>
+                                <option>Camisetas</option>
+                                <option>Jaquetas</option>
+                                <option>Acessórios</option>
+                                <option>Calçados</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <label>Imagem</label>
+                            <div class="file">
+                                <label class="file-label">
+                                <input class="file-input" type="file" name="resume">
+                                <span class="file-cta">
+                                    <span class="file-icon">
+                                    <i class="fas fa-upload"></i>
+                                    </span>
+                                    <span class="file-label">
+                                    Escolha o arquivo
+                                    </span>
+                                </span>
+                                </label>
+                            </div>
+                        </div>                   
+                    </div>
+                    <!--<input class="input" type="text" placeholder="Categoria do produto">-->
+                </form>
+              </section>
+              <footer class="modal-card-foot">
+                <button class="button is-success" type="submit">Salvar</button>
+                <button class="button" type="reset">Cancelar</button>
+              </footer>
+            </div>
+          </div>
     </main>
     <!-- RODAPÉ -->
     <footer class="footer" id="rodape">
@@ -101,5 +124,6 @@
 
     <script src="./assets/js/class.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/modal.js"></script>
 </body>
 </html>

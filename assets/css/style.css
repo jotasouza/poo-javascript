@@ -77,4 +77,5 @@ main{
 
 #rodape{
     background-color: var(--first-color-ligther);
+    height: 220px;
 }
