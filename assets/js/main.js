@@ -1,15 +1,44 @@
-//PEGA O ELEMENTO HTML
-const saveProduct = document.getElementById('buttonSave')
-//ATRIBUI UMA AÇÃO AO BOTÃO, CHAMANDO A FUNÇÃO DA CLASSE
-saveProduct.addEventListener('click', product.saveProduct)
+//VARIAVEL PRODUTO TEMPORÁRIA
+const tempProduct = {
+    name: 'Camiseta Next White',
+    description: 'Componha o seu look casual perfeito com esta camiseta Next White. Produto 100% algodão.',
+    price: 29.90,
+    category: 'Camisetas',
+    image: './assets/img/camiseta-next-white.png'
+}
 
-const cancelProduct = document.getElementById('buttonCancel')
-cancelProduct.addEventListener('click', product.cancelAddProduct)
+//FUNCTION GET
+//Esta função vai até o local storage e retorna com os dados (string) convertendo para
+//o formato JSON. Caso o local storage esteja vazio, a função retorna um array vazio.
+const getLocalStorage = () => JSON.parse(localStorage.getItem('db_product')) ?? []
 
-//const editProduct = document.getElementById('buttonEdit')
-//editProduct.addEventListener('click', product.editProduct)
+//FUNCTION SET
+//Esta função pega os dados informados, converte para string(local storage só armazena dados
+//no formato string) e salva no local storage.
+const setLocalStorage = (dbProduct) => localStorage.setItem('db_product', JSON.stringify(dbProduct))
 
-//PEGA O VALOR DOS INPUTS
-const productName = document.getElementById('nomeProduto').value
-const descriptionProduct = document.getElementById('descricao').value
-const priceProduct = document.getElementById('valor').value
+// ============================== FUNÇÕES CRUD ============================= //
+
+//FUNÇÃO CREATE
+const createProduct = (product) => {
+    const dbProduct = getLocalStorage()
+    dbProduct.push(product)
+    setLocalStorage(dbProduct)
+    readProduct()
+}
+
+//FUNÇÃO READ
+const readProduct = () => {
+   const read = getLocalStorage()
+   console.log(read)
+}
+
+//FUNÇÃO UPDATE
+const updateProduct = () => {
+
+}
+
+//FUNÇÃO DELETE
+const deleteProduct = () => {
+
+}
